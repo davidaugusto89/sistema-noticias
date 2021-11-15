@@ -20,7 +20,7 @@ O banco de dados deve ser criado localmente, com as seguintes configurações:
 Host = 'localhost'
 Usuário = 'root'
 Senha = ''
-Nome do banco de dados = sistema-noticias
+Nome do banco de dados = 'sistema-noticias'
 ```
 
 Para instalar a aplicação deve ser executados os seguintes comandos no terminal.
