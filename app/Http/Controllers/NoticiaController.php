@@ -16,8 +16,7 @@ class NoticiaController extends Controller
             $noticias = Noticia::join('noticias_categorias as nc','nc.id','noticias.noticia_categoria_id')
             ->where('noticias.titulo', 'like', "%$s%")
             ->orWhere('nc.categoria', 'like', "%$s%")
-            ->whereNull('noticias.deleted_at')
-            ->whereNull('nc.deleted_at');
+            ->get();
         }
 
         return view('noticias.index', compact('noticias'));
