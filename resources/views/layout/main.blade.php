@@ -17,17 +17,37 @@
       #link_topo a{
         font-size: 0.9rem;
       }
+      
+      @media only screen and (max-device-width: 480px) {
+        .navbar-brand {
+            float:none !important;
+            text-align: center !important;
+            margin:0 auto !important;
+            display:block !important;
+            width: 100% !important;
+        }
+        #link_topo a{
+          float:none !important;
+          text-align: center !important;
+          margin:5px auto !important;
+          display:block !important;
+          width: 100% !important;
+        }
+        .input-group{
+          margin: 5px 0;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
-      <div class="navbar navbar-dark bg-dark box-shadow fixed-top">
-        <div class="container d-flex justify-content-between">
-          <a href="{{ route('noticias.index') }}" class="navbar-brand d-flex align-items-center">
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex text-md-left text-center justify-content-between">
+          <a href="{{ route('noticias.index') }}" class="navbar-brand">
             <strong>LOGOTIPO</strong>
           </a>
 
-          <div class="col-lg-5 col-8 text-right" id="link_topo">
+          <div class="col-lg-5 col-12 text-right" id="link_topo">
             <a href="{{ route('noticias.cadastrar') }}" class="text-white mr-3">Cadastrar Notícias</a>
             <a href="{{ route('noticias.index') }}" class="text-white">Exibir Notícias</a>
           </div>
@@ -43,7 +63,7 @@
     </header>
     
     <main>
-      <div class="container py-5 my-5">
+      <div class="container py-5">
         @yield('content')
       </div>
     </main>
