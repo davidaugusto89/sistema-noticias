@@ -4,10 +4,13 @@ Sistema de notícias em PHP com cadastro de notícias, listagem e busca.
 
 ## Requisitos básicos
 
-PHP >= 7.3
-MySQL
-Composer
-Git
+> PHP >= 7.3
+
+> MySQL
+
+> Composer
+
+> Git
 
 ## Guia de Instalação
 
@@ -17,7 +20,7 @@ O banco de dados deve ser criado localmente, com as seguintes configurações:
 Host = 'localhost'
 Usuário = 'root'
 Senha = ''
-Nome do banco de dados = sistema-noticias
+Nome do banco de dados = 'sistema-noticias'
 ```
 
 Para instalar a aplicação deve ser executados os seguintes comandos no terminal.
