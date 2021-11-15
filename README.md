@@ -5,8 +5,11 @@ Sistema de notícias em PHP com cadastro de notícias, listagem e busca.
 ## Requisitos básicos
 
 PHP >= 7.3
+
 MySQL
+
 Composer
+
 Git
 
 ## Guia de Instalação
