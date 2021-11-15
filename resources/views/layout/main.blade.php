@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+      html, body{
+        font-family: Montserrat;
+      }
+      #link_topo a{
+        font-size: 0.9rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,13 +27,12 @@
             <strong>LOGOTIPO</strong>
           </a>
 
-          <div class="col-lg-5 col-8 text-right">
+          <div class="col-lg-5 col-8 text-right" id="link_topo">
             <a href="{{ route('noticias.cadastrar') }}" class="text-white mr-3">Cadastrar Notícias</a>
             <a href="{{ route('noticias.index') }}" class="text-white">Exibir Notícias</a>
           </div>
 
           <form class="input-group input-group-sm col-lg-4 col-12" method="get" action="{{ route('noticias.index') }}">
-            {{ csrf_field()  }}
             <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="search" name="search" value="<?php echo empty($_GET['search']) ? '' : $_GET['search']; ?>">
             <div class="input-group-append">
               <button type="submit" class="input-group-text btn btn-outline-secondary border-left-0" id="search"><i class="fa fa-search"></i></button>
